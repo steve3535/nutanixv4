@@ -12,7 +12,7 @@ Illico, je me refuse donc a juste mettre le nouveau pass, mais me résout à uti
 * le script utilise HTTP basic authentication; jai donc entrepris dencoder en base64:
   `echo -n ro:xxxx | base64`  
   PS:
-  > nul besoin dentourer de quotes, ca donne exactement le meme encodage  
-  > on est souvent amené a croire que lorskon encode avec base64, il faut que le string se termine par = ou ==. Non. pas forcement, = ou == c juste le padding pour que le strings soit tjrs un multiple de 4  
-  > -n du echo est important, autrement il considere que le \n final fait partie du mdp  
+  > - nul besoin dentourer de quotes, ca donne exactement le meme encodage  
+  > - on est souvent amené a croire que lorskon encode avec base64, il faut que le string se termine par = ou ==. Non. pas forcement, = ou == c juste le padding pour que le strings soit tjrs un multiple de 4  
+  > - -n du echo est important, autrement il considere que le \n final fait partie du mdp  
   > 
