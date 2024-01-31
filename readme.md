@@ -22,7 +22,18 @@ Illico, je me refuse donc a juste mettre le nouveau pass, mais me résout à uti
 * par contre, mes tentatives sont restées vaines: je recois un 401 systematiquement durant mes appels:
   `curl -X POST -H 'content-type:application/json' -H 'Authorization:basic bHgfsteralkjs==' https://server_ahv01:9440/api/nutanix/v3/vms/list -d '{"kind":"vm"}'`  
   PS:
-  > `-d "{'kind':'vm'}"` a la place de `-d '{"kind":"vm"}'` generera une err. JSON is a fucking asshole: evitez den ecrire bbeaucoup, vs ferez forcement une erreur de syntaxe, qui plus est sera difficile a capture
+  > `-d "{'kind':'vm'}"` a la place de `-d '{"kind":"vm"}'` generera une err ==> JSON is a fucking asshole: evitez den ecrire bbeaucoup, vs ferez forcement une erreur de syntaxe, qui plus est sera difficile a capturer  
+
+### TENTER UNE NOUVELLE EXPERIENCE AVEC la V4
+  **un peu dhistorique**  
+  avec AHV pilotant l'hypervision de toute l'infra. (cest a dire vmware est subordonné aux PCs), le souci majeur que jai retenu en adressant linfra par code est la necessité dutiliser plusieurs APIs:
+  * une API pour le cluster mgt, les VMs et une partie du network (v3) -- liée aux PC
+  * une API pour le storage et une autre partie du network (v2) -- liée aux PE
+  * une API encore pour attaquer ESX en natif
+  la promesse de la v4 est entre autres d' unifier tout cela.
+  Donc, pourquoi pas ???
+
+  
   
   
 
