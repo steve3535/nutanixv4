@@ -15,4 +15,9 @@ Illico, je me refuse donc a juste mettre le nouveau pass, mais me résout à uti
   > - nul besoin dentourer de quotes, ca donne exactement le meme encodage  
   > - on est souvent amené a croire que lorskon encode avec base64, il faut que le string se termine par = ou ==. Non. pas forcement, = ou == c juste le padding pour que le strings soit tjrs un multiple de 4  
   > - -n du echo est important, autrement il considere que le \n final fait partie du mdp  
-  > 
+  > ATTN ATTN ATTN base64 nest en rien safe, c de lencodage, pas de l'encryption, il sert a generer de l'ascii c tout
+  > pkoi lutiliser alors ? c du transport, par exp: transporter facilement des caracteres "bizarres", on peut justement par exp transporter des secrets encryptés
+
+
+
+
