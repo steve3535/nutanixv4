@@ -29,7 +29,7 @@ Illico, je me refuse donc a juste mettre le nouveau pass, mais me résout à uti
   avec AHV pilotant l'hypervision de toute l'infra. (cest a dire vmware est subordonné aux PCs), le souci majeur que jai retenu en adressant linfra par code est la necessité dutiliser plusieurs APIs:
   * une API pour le cluster mgt, les VMs et une partie du network (v3) -- liée aux PC
   * une API pour le storage et une autre partie du network (v2) -- liée aux PE
-  * une API encore pour attaquer ESX en natif
+  * une API encore pour attaquer ESX en natif  
   la promesse de la v4 est entre autres d' unifier tout cela.
   Donc, pourquoi pas ???
 
