@@ -15,8 +15,16 @@ Illico, je me refuse donc a juste mettre le nouveau pass, mais me résout à uti
   > - nul besoin dentourer de quotes, ca donne exactement le meme encodage  
   > - on est souvent amené a croire que lorskon encode avec base64, il faut que le string se termine par = ou ==. Non. pas forcement, = ou == c juste le padding pour que le strings soit tjrs un multiple de 4  
   > - -n du echo est important, autrement il considere que le \n final fait partie du mdp  
-  > ATTN ATTN ATTN base64 nest en rien safe, c de lencodage, pas de l'encryption, il sert a generer de l'ascii c tout
-  > pkoi lutiliser alors ? c du transport, par exp: transporter facilement des caracteres "bizarres", on peut justement par exp transporter des secrets encryptés
+  > - ATTN ATTN ATTN base64 nest en rien safe, c de lencodage, pas de l'encryption, il sert a generer de l'ascii c tout
+  > - pkoi lutiliser alors ? c du transport, par exp: transporter facilement des caracteres "bizarres", on peut justement par exp transporter des secrets encryptés
+  > - pour securiser ce genre de choses, fo se tourner vers une solution de vault: Hashicorp vault, mais ...   
+  > - en absolu, on peut se contenter de bien proteger le fichier en local, car vu quavec AHV, on est sur du https, rien ne transite en clair de tte facon
+* par contre, mes tentatives sont restées vaines: je recois un 401 systematiquement durant mes appels:
+  `curl -X POST -H 'content-type:application/json' -H 'Authorization:basic bHgfsteralkjs==' https://server_ahv01:9440/api/nutanix/v3/vms/list -d '{"kind":"vm"}'`  
+  PS:
+  > `-d "{'kind':'vm'}"` a la place de `-d '{"kind":"vm"}'` generera une err. JSON is a fucking asshole: evitez den ecrire bbeaucoup, vs ferez forcement une erreur de syntaxe, qui plus est sera difficile a capture
+  
+  
 
 
 
